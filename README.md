@@ -1,5 +1,5 @@
 # HRKD: Hierarchical Relational Knowledge Distillation for Cross-domain Language Model Compression
-This repository contains the code for the paper in EMNLP 2021: ["HRKD: Hierarchical Relational Knowledge Distillation for Cross-domain Language Model Compression"](https://arxiv.org/abs/2110.08551).
+This repository contains the code for the paper in EMNLP 2021: ["HRKD: Hierarchical Relational Knowledge Distillation for Cross-domain Language Model Compression"](https://aclanthology.org/2021.emnlp-main.250).
 
 
 ## Requirements
@@ -21,13 +21,13 @@ Download the GLUE dataset (containing MNLI) using the script in [HERE](https://g
 Download the Amazon Reviews dataset from [HERE](https://www.cs.jhu.edu/~mdredze/datasets/sentiment/index2.html), and extract it into `./dataset/amazon_review/`
 
 
-## Train the teacher model (BERT$_{\rm B}$-single) from single-domain
+## Train the teacher model (BERT-b-single) from single-domain
 ```shell
 bash train_domain.sh
 ```
 
 
-## Distill the student model (BERT$_{\rm S}$) with TinyBERT-KD from single-domain
+## Distill the student model (BERT-s) with TinyBERT-KD from single-domain
 ```shell
 bash finetune_domain.sh
 ```
@@ -40,7 +40,7 @@ bash train_multi_domain.sh
 And then put the checkpoints to the specified directories (see the beginning of `finetune_multi_domain.py` for more details).
 
 
-## Distill the student model (BERT$_{\rm S}$) with our HRKD from multi-domain
+## Distill the student model (BERT-s) with our HRKD from multi-domain
 ```shell
 bash finetune_multi_domain.sh
 ```
